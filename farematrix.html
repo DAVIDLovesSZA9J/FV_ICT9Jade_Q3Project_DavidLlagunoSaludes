@@ -1,0 +1,300 @@
+<!-- Credits/Sources
+CSS Shadow Generator: https://html-css-js.com/css/generator/box-shadow/
+Logo: Made by Carlos David using photopea.com
+Custom Font (Cubao) obtained from: https://befonts.com/cubao-free-font.html
+Background Images: https://neocha.com/magazine/art-of-the-jeepney/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasabay: Fare Matrix</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Pasabay Logo.png">
+
+    <style>
+
+        /* Custom Font (Acquired from befonts.com) */
+        @font-face {
+            font-family: 'Cubao-L';
+            src: url(Cubao_Free_Narrow.otf);
+        }
+
+        @font-face {
+            font-family: 'Cubao';
+            src: url(Cubao_Free_Regular.otf);
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: url(BG2.png);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            font-family: 'Cubao-L';
+            font-size: 30px;
+        }
+
+        .nav-item {
+            margin-left: 10px;
+        }
+
+        .nav-item img {
+            margin-top: 12px;
+            width: 35px;
+        }
+
+        #accbtn {
+            width: 200px;
+            padding: 5px;
+            border: none;
+            border-radius: 20px;
+            background-color: white;
+            color: #212529;
+        }
+
+        #bookbtn {
+            margin-right: 15px;
+            border: none;
+            background-color: transparent;
+            color: white;
+            transition: transform 0.4s ease;
+        }
+
+        #bookbtn:hover {
+            transform: scale(1.06);
+        }
+
+        footer {
+            width: 100%;
+            height: 45px;
+            padding-top: 11px;
+            margin-top: auto;
+            background-color: #212529ae;
+            font-family: 'Poppins';
+            font-size: 17px;
+            color: white;
+            text-align: center;
+        }
+
+        .farematrix h1 {
+            margin-top: 50px;
+            line-height: 65px;
+            font-size: 70px;
+            font-family: 'Cubao';
+            color: rgb(255, 98, 0);
+            text-shadow: 2px 2px 7px #0000009c;
+            transition: transform 0.4s ease;
+        }
+
+        span {
+            font-size: 120px;
+            color: greenyellow;
+        }
+
+        .farematrix h1:hover {
+            transform: translateY(-10px);
+        }
+
+        form {
+            font-family: 'Poppins';
+        }
+
+        .pickup label {
+            margin-top: 30px;
+        }
+
+        label {
+            font-size: 30px;
+            font-weight: 700;
+            color: white;
+        }
+
+        select {
+            width: 450px;
+            min-height: 40px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-radius: 10px;
+        }
+
+        .farecontainer button {
+            width: 450px;
+            min-height: 40px;
+            margin-bottom: 8px;
+            padding-left: 10px;
+            border-radius: 10px;
+        }
+
+        #regfare {
+            margin-top: 20px;
+            border: none;
+            background-color: greenyellow;
+            font-weight: 600;
+        }
+
+        #discfare {
+            border: none;
+            background-color: rgb(255, 98, 0);
+            color: white;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px #00000047;
+        }
+
+        .farecontainer {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 50px;
+        }
+
+        .fareresult {
+            width: 600px;
+            margin-top: 25px;
+            margin-right: 50px;
+            background-color: #16191cb5;
+            border-radius: 50px;
+            box-shadow: -2px -1px 13px 0px rgba(0, 0, 0, 0.53);
+            -webkit-box-shadow: -2px -1px 13px 0px rgba(0, 0, 0, 0.454);
+            -moz-box-shadow: -2px -1px 13px 0px rgba(0, 0, 0, 0.75);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .fareresult h1 {
+            margin-top: 10px;
+            font-family: 'Cubao';
+            font-size: 90px;
+            color: greenyellow;
+            text-shadow: 2px 2px 7px #0000009c;
+        }
+
+        .fareresult p {
+            margin-top: 90px;
+            font-size: 90px;
+            font-family: 'Poppins';
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar
+    Source: 2Q Project -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container-fluid">
+            <div class="navbar-collapse">
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a href="index.html"><img src="Pasabay Logo.png" alt=""></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="farematrix.html">Fare Matrix</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+                </ul>
+
+                <a href="farematrix.html"><button type="button" id="bookbtn">Book Now</button></a>
+                <a href="registration.html"><button type="button" id="accbtn">Create Account</button></a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="farecontainer">
+
+        <div class="farematrix">
+            <h1><span>Pasabay</span><br>Fare Matrix</h1>
+
+            <form>
+                <div class="pickup">
+                    <label>Pick-Up Location</label><br>
+                    <select id="pickup">
+                        <option value="0">Santolan</option>
+                        <option value="1.2">Katipunan</option>
+                        <option value="2.4">Anonas</option>
+                        <option value="3.6">Araneta Center-Cubao</option>
+                        <option value="4.8">Betty Go-Belmonte</option>
+                        <option value="6.0">Gilmore</option>
+                        <option value="7.2">J. Ruiz</option>
+                        <option value="8.4">V. Mapa</option>
+                        <option value="9.6">Pureza</option>
+                        <option value="10.8">Legarda</option>
+                        <option value="12.0">Recto</option>
+                    </select>
+                </div>
+
+                <div class="dropoff">
+                    <label>Drop-Off Location</label><br>
+                    <select id="dropoff">
+                        <option value="0">Santolan</option>
+                        <option value="1.2">Katipunan</option>
+                        <option value="2.4">Anonas</option>
+                        <option value="3.6">Araneta Center-Cubao</option>
+                        <option value="4.8">Betty Go-Belmonte</option>
+                        <option value="6.0">Gilmore</option>
+                        <option value="7.2">J. Ruiz</option>
+                        <option value="8.4">V. Mapa</option>
+                        <option value="9.6">Pureza</option>
+                        <option value="10.8">Legarda</option>
+                        <option value="12.0">Recto</option>
+                    </select>
+                </div>
+
+                <button type="button" id="regfare">Regular Fare</button><br>
+                <button type="button" id="discfare">Discounted Fare</button>
+            </form>
+        </div>
+
+        <div class="fareresult">
+            <h1>Fare:</h1>
+            <p id="displayfare">?</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>David, Llaguno, Saludes | 9-Jade © 2026</p>
+    </footer>
+
+    <script>
+        // Fare Calculator (Source: Sir Renn)
+        function calculateFare(discountRate) {
+            let pickup = parseFloat(document.getElementById("pickup").value);
+            let dropoff = parseFloat(document.getElementById("dropoff").value);
+
+            let basefare = 50;
+            let perKMrate = 15;
+            let baseKM = 2;
+
+            let distance = Math.max(Math.abs(dropoff - pickup), 0);
+            let extraKM = Math.max(distance - baseKM, 0);
+
+            let fare = basefare + extraKM * perKMrate;
+            fare = fare * discountRate;
+
+            document.getElementById("displayfare").innerHTML = fare.toFixed(2) + " PHP";
+        }
+
+        document.getElementById("regfare").onclick = function () {
+            calculateFare(1);
+        };
+
+        document.getElementById("discfare").onclick = function () {
+            calculateFare(0.8);
+        };
+    </script>
+
+</body>
+</html>
