@@ -1,0 +1,194 @@
+<!-- Credits/Sources
+CSS Shadow Generator: https://html-css-js.com/css/generator/box-shadow/
+Logo: Made by Carlos David using photopea.com
+Custom Font (Cubao) obtained from: https://befonts.com/cubao-free-font.html
+Background Images: https://neocha.com/magazine/art-of-the-jeepney/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasabay</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Pasabay Logo.png">
+
+    <style>
+
+        /* Custom Font (Acquired from befonts.com) */
+        @font-face {
+            font-family: 'Cubao-L';
+            src: url(Cubao_Free_Narrow.otf);
+        }
+
+        @font-face {
+            font-family: 'Cubao';
+            src: url(Cubao_Free_Regular.otf);
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: url(BG6.png);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            font-family: 'Cubao-L';
+            font-size: 30px;
+        }
+
+        .nav-item {
+            margin-left: 10px;
+        }
+
+        .nav-item img {
+            margin-top: 12px;
+            width: 35px;
+        }
+
+        #hero {
+            text-shadow: 2px 2px 7px #0000009c;
+            line-height: 130px;
+            margin-top: 90px;
+            margin-left: 50px;
+            font-size: 160px;
+            color: greenyellow;
+            font-family: 'Cubao-L';
+            transition: transform 0.4s ease;
+        }
+
+        span {
+            color: rgb(255, 98, 0);
+            font-family: 'Cubao';
+            font-weight: 700;
+            font-size: 190px;
+        }
+
+        #hero:hover {
+            transform: translateY(-10px);
+        }
+
+        .ontoggle {
+            text-shadow: 2px 2px 7px #0000009c;
+            margin-top: 30px;
+            margin-left: 50px;
+            font-size: 30px;
+            font-family: 'Poppins';
+            color: white;
+        }
+
+        #details-h {
+            font-weight: 750;
+        }
+
+        #instructions {
+            width: 800px;
+            font-size: 20px;
+        }
+
+        #accbtn {
+            background-color: white;
+            border: none;
+            color: #212529;
+            border-radius: 20px;
+            width: 200px;
+            padding: 5px;
+        }
+
+        #bookbtn {
+            margin-right: 15px;
+            background-color: transparent;
+            border: none;
+            color: white;
+            transition: transform 0.4s ease;
+        }
+
+        #bookbtn:hover {
+            transform: scale(1.06);
+        }
+
+        footer {
+            width: 100%;
+            padding-top: 11px;
+            height: 45px;
+            background-color: #212529ae;
+            margin-top: auto;
+            font-family: 'Poppins';
+            font-size: 17px;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar
+    Source: 2Q Project -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container-fluid">
+            <div class="navbar-collapse">
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a href="index.html"><img src="Pasabay Logo.png" alt=""></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="farematrix.html">Fare Matrix</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="schedule.html">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
+                </ul>
+
+                <a href="farematrix.html"><button type="button" id="bookbtn">Book Now</button></a>
+                <a href="registration.html"><button type="button" id="accbtn">Create Account</button></a>
+
+            </div>
+        </div>
+    </nav>
+
+        <div class="overlay">
+        <div class="container py-5">         
+            <div class="background"> 
+                <h1 class="text-center mb-3"> OBMC's Schedule</h1>
+                <table class="table table-bordered text-center align-middle">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Day</th>
+                            <th>Office Hours</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr><td>Monday</td><td>8:00 AM - 4:00 PM</td><td>Registrar's Office</td></tr>
+                        <tr><td>Tuesday</td><td>8:00 AM - 4:00 PM</td><td>Accounting Office</td></tr>
+                        <tr><td>Wednesday</td><td>8:00 AM - 4:00 PM</td><td>Guidance Office</td></tr>
+                        <tr><td>Thursday</td><td>8:00 AM - 4:00 PM</td><td>Principal's Office</td></tr>
+                        <tr><td>Friday</td><td>8:00 AM - 3:00 PM</td><td>Admin Office</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>David, Llaguno, Saludes | 9-Jade © 2026</p>
+    </footer>
+
+    <script>
+        var instructionsText = "Pasabay is a commuter-friendly fare guide designed to help Filipinos quickly check jeepney fares, routes, and travel costs. We make everyday commuting simpler, clearer, and more accessible for everyone.";
+        document.getElementById("instructions").innerHTML = instructionsText;
+    </script>
+
+</body>
+</html>
