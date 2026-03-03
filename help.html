@@ -85,13 +85,18 @@
             box-shadow: -2px -1px 13px 0px rgba(0, 0, 0, 0.53);
             -webkit-box-shadow: -2px -1px 13px 0px rgba(0, 0, 0, 0.454);
             -moz-box-shadow: -2px -1px 13px 0px rgba(0, 0, 0, 0.75);
+            transition: transform 0.4s ease;
+        }
+        
+        .confirmation:hover {
+            transform: translateY(-10px)
         }
 
         .confirmation h1 {
             padding-top: 50px;
             font-family: 'Cubao';
             font-size: 90px;
-            color: rgb(255,98,0);
+            color: greenyellow;
             text-align: center;
             text-shadow: 2px 2px 7px #0000009c;
         }
@@ -110,6 +115,20 @@
             text-align: center;
             font-size: 20px;
             color: white;  
+        }
+        span {
+            font-weight: 700;
+        }
+        footer {
+            width: 100%;
+            height: 45px;
+            padding-top: 11px;
+            margin-top: auto;
+            background-color: #212529ae;
+            font-family: 'Poppins';
+            font-size: 17px;
+            color: white;
+            text-align: center;
         }
     </style>
 </head>
@@ -151,7 +170,7 @@
 
     <script>
         var instructionsText =
-        "Telephone: 000-0000-000<br>Facebook: @pasabay_ph<br>Instagram: @pasabay_ph<br> Email: pasabay@zara.com";
+        "<span>Telephone:</span> 000-0000-000<br><span>Facebook:</span> @pasabay_ph<br><span>Instagram:</span> @pasabay_ph<br> <span>Email:</span> pasabay@zara.com";
         document.getElementById("instructions").innerHTML = instructionsText;
     </script>
 </body>
